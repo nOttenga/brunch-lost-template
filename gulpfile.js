@@ -15,7 +15,7 @@ var gulp        = require('gulp'),
     path        = require('path'),
     server      = tinylr(),
     es          = require('event-stream');
-var jeet        = require('jeet');
+
 var rupture     = require('rupture');
 
 

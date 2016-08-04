@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="285px" height="19px" viewBox="0 0 285 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39 (31667) - http://www.bohemiancoding.com/sketch -->
+    <title>line-footer</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="line-footer" transform="translate(1.000000, 0.000000)">
+            <path d="M8.899,9.061 L272.9,9.061" id="Stroke-357" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            <polyline id="Fill-358" fill="#FFFFFF" points="271.173 15.505 275.916 3.18 277.072 3.18 272.313 15.505 271.173 15.505"></polyline>
+            <polygon id="Stroke-359" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" points="271.173 15.505 275.916 3.18 277.072 3.18 272.313 15.505"></polygon>
+            <polyline id="Fill-360" fill="#FFFFFF" points="277.004 15.505 281.748 3.18 282.903 3.18 278.144 15.505 277.004 15.505"></polyline>
+            <polygon id="Stroke-361" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" points="277.004 15.505 281.748 3.18 282.903 3.18 278.144 15.505"></polygon>
+            <polyline id="Fill-362" fill="#FFFFFF" points="10.589 15.505 5.831 3.18 6.986 3.18 11.729 15.505 10.589 15.505"></polyline>
+            <polygon id="Stroke-363" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" points="10.589 15.505 5.831 3.18 6.986 3.18 11.729 15.505"></polygon>
+            <polyline id="Fill-364" fill="#FFFFFF" points="4.759 15.505 0 3.18 1.156 3.18 5.898 15.505 4.759 15.505"></polyline>
+            <polygon id="Stroke-365" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" points="4.759 15.505 0 3.18 1.156 3.18 5.898 15.505"></polygon>
+            <path d="M26.822,15.465 L114.822,15.465" id="Path" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M167.822,15.465 L255.822,15.465" id="Path" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            <polyline id="Fill-356" fill="#FFFFFF" points="148.242 9.052 139.189 18.104 130.136 9.052 139.189 0 148.242 9.052"></polyline>
+            <polyline id="Fill-356-Copy" fill="#BB3A0A" points="145.621 9.052 139.189 15.4832895 132.757 9.052 139.189 2.62071048 145.621 9.052"></polyline>
+        </g>
+    </g>
+</svg>

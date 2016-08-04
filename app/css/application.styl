@@ -1,11 +1,385 @@
 
 @import '_base'
 
+@import '_buttons'
+@import '_menu'
+@import '_particles'
+
+
+
+
+body
+  height 3000px
+  background-color: black
 
 
 // Init
 
+#style-rect
+  position: fixed;
+  display: block;
+  height 40px
+  z-index 1000
+  top -19px
+  left calc(50% - 20px)
 
+
+
+.container
+  position relative
+
+#content
+  position: relative
+  z-index: 100
+  top -5px
+  background-color: #02131C
+  width 100%
+  height: 100%
+
+
+.parallax
+  width 100%
+
+  //
+
+  background-image url(../images/parallax.jpg)
+
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  position: relative;
+  margin 0
+  padding 0
+
+.divider
+  text-align: center;
+  margin: 0px 0 100px
+  opacity 0.8
+
+.icon-divider
+
+  text-align: center;
+  img
+    width 50px
+
+
+#hero
+
+
+  .hero-img
+    position fixed
+  .lvl1
+    z-index 1
+  .lvl1-falling
+    z-index: 2
+    background-color: rgba(0,0,0,0);
+    height: 1280px;
+    width: 100%;
+    margin: auto;
+    position: absolute;
+    overflow: hidden;
+  .lvl1-1
+    z-index 3
+  .lvl2
+    z-index 5
+  .lvl3
+    z-index 6
+  .lvl4
+    z-index 7
+  .lvl5
+    z-index 8
+  .lvl6
+    z-index 9
+  .lvl7
+    z-index 10
+  img
+    vertical-align: bottom
+
+  .teamlogo
+    position: absolute
+    bottom 100px
+    left 40px
+    z-index: 101
+    width 100px
+    opacity .4
+      img
+        width 100%
+
+  .lvlTitle
+    position: relative;
+    z-index 4
+    width: 100%
+    height: 100%
+    text-align center
+
+
+
+    .lvlTitle-inner
+      img
+        width 45px
+      h1
+        text-transform: uppercase
+        font-size: 4em
+        margin 0
+        font-family: 'Raleway'
+        font-weight: 100
+        opacity: .8
+        span
+          font-weight: 500
+
+
+
+#hero .lvlTitle > *
+    position: absolute;
+    top: 40%;
+    right: auto;
+    bottom: auto;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+
+.background-hero-filler
+  width 100%
+  height 200px
+  background-color black
+
+  position: absolute
+  z-index 11
+
+
+#intro
+  lost-center 720px
+  z-index: 12
+
+  padding-top 100px
+  //background-color: black
+  #quote
+    text-align: center
+    font-size: 1.5em
+    //font-style: italic
+    padding: 50px 0
+    text-transform: uppercase;
+    font-weight: 200
+    line-height 1.55em
+    .bold
+      font-weight: 500
+  #video
+    margin: 50px 0
+  #social
+    text-align: center;
+    .social-title
+      background: url('../images/link-bg.png')
+      width 283px
+      height 68px
+      background-repeat: no-repeat;
+      background-position: center;
+      margin 0 auto
+      color #02131C
+      text-transform: uppercase
+      font-weight: bold;
+      h4
+        margin: 0;
+        padding-top: 25px;
+        font-weight: 700;
+    ul
+      list-style: none;
+      margin 0
+      padding: 0
+      li
+        display inline-block
+        width 40px
+        &:nth-child(2)
+          padding 20px
+
+
+
+#feed
+  width 100%
+  //background-color: white
+  margin-top 100px
+  #feed-inner
+    //width 95%
+    margin 0 auto
+    padding 30px 0
+    background-color: black
+
+    #feed-list
+      margin: 0
+
+      .owl-nav
+        position absolute
+        width 100%
+        .owl-prev
+          float left
+          padding-left: 15px
+          padding-top: 5px
+        .owl-next
+          float right
+          padding-right: 15px
+          padding-top: 5px
+
+      // .owl-stage-outer
+      //   overflow-y: visible;
+      .owl-stage
+        padding 0 !important
+
+      .feed-el
+        //width 500px
+        height 600px
+        margin-right: 10px
+        background-color: red
+        position: relative
+        border-right 3px solid black
+
+        #feed-img-one
+          width: 145%;
+          margin-bottom: 100px;
+          position: relative;
+          left: -31px;
+
+        .feed-el-inner
+        //  width 250px
+          position: absolute
+          bottom: 10%
+          padding: 10%
+          // .feed-el-img
+          //   position absolute
+          //   width 300px
+          //   height 300px
+          //   background-color: gold
+          //   top -80px
+          //   right -20px
+
+
+          .feed-el-title
+            color white
+            font-size: 2em
+            text-transform: uppercase;
+            p
+              margin: 0
+
+          .feed-el-content
+            color white
+
+
+
+
+#newsletter
+  lost-center 580px
+  text-align: center;
+  min-height: 80vh
+  padding-top: 100px
+
+  #newsletter-inner
+    //width 100%
+    padding-top: 50px
+
+
+    h3
+      font-size 1.5em
+    form
+      width 100%
+      padding-top 50px
+      input
+        width 65%
+        background: transparent
+        border 0
+        border-bottom: 2px solid white
+        height 40px
+
+      button
+        width 30%
+        height 44px
+        background: transparent
+        border 2px solid white
+        position relative
+        text-transform: uppercase;
+        color white
+        font-weight: bold
+
+        //top 2px
+        &:hover
+          background-color: white
+
+    #successo
+      display none
+
+
+#hiring
+  width 100%
+  background-color: white
+  color black
+  //min-height: 80vh
+  padding-top: 100px
+  padding-bottom: 250px
+
+  #hiring-inner
+    lost-center 980px 20px
+    margin-top: 50px
+    color #02131C
+    h3
+      text-align: center
+      margin-bottom: 80px
+      font-size: 1.5em
+    .hiring-content-inner
+      lost-column 1/2 20px
+
+    #hiring-content-one
+      // border-right: 1px solid white
+      // padding-right: 20px
+      #hiring-image
+        width 100px
+        height 100px
+        background: blue
+        float: left
+      #hiring-open
+        margin-left 110px
+        #h1-open
+          text-transform: uppercase;
+          font-size: 0.5em
+          margin 0
+          opacity .6
+          font-weight: bold;
+        #h1-title
+          text-transform: uppercase;
+          margin 4px 0 0 0
+          font-size: 1.2em
+
+        #h1-txt
+          font-size: 0.75em
+          margin-bottom: 35px
+
+
+    #hiring-content-two
+      padding-left: 40px
+      border-left: 2px solid black
+      #h2-title
+        text-transform: uppercase;
+        font-size: 1.2em
+        margin-top 0
+        font-weight: bold;
+      #h2-txt
+        font-size: 0.75em
+        a
+          text-transform: lowercase
+          display: block
+          padding-top: 20px
+          &:hover
+            opacity .7
+
+
+
+
+
+
+
+
+#footer
+  background-color: blue
+  min-height: 500px
+  lost-align center
+  text-align: center;
 
 
 //////////////// >480
