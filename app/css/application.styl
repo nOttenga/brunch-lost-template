@@ -8,20 +8,28 @@
 
 
 
-body
-  height 3000px
-  background-color: black
+/* This only works with JavaScript,
+if it's not present, don't show loader */
 
+#loader { display: block; position: absolute; left: 100px; top: 0; }
+#loader {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background: url('../images/loader.gif') center no-repeat black;
+}
+
+.bold
+  font-family: 'montserratregular'
 
 // Init
 
-#style-rect
-  position: fixed;
-  display: block;
-  height 40px
-  z-index 1000
-  top -19px
-  left calc(50% - 20px)
+#body
+  background-color: #02131C
+  min-height: 4000px
 
 
 
@@ -34,23 +42,9 @@ body
   top -5px
   background-color: #02131C
   width 100%
-  height: 100%
 
 
-.parallax
-  width 100%
 
-  //
-
-  background-image url(../images/parallax.jpg)
-
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: contain;
-
-  position: relative;
-  margin 0
-  padding 0
 
 .divider
   text-align: center;
@@ -64,71 +58,116 @@ body
     width 50px
 
 
+
+// Topbar CTA
+.topbar
+  width: 100%
+  position: fixed;
+  background #02131C
+  height 25px
+  text-align: right
+  z-index: 1000
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  &-inner
+    padding 0 25px 0 5px
+    a
+      color white !important
+      font-size: 0.7em
+      margin-left: 30px
+      &:hover
+        opacity .7
+
 #hero
+  height 100vh
+  max-width 100%
+
+  .js-hero-parallax
+    .hero-img
+      position fixed
+      background-position: center center;
+      background-size: cover;
+      background-repeat: repeat-x;
+
+      width: 100%;
+      height: 100%
+    .lvl1
+      z-index 1
+      background-image: url('../images/lvl1.jpg');
+    .lvl1-falling
+      z-index: 2
+      background-color: rgba(0,0,0,0);
+      height: 1280px;
+      width: 100%;
+      margin: auto;
+      position: absolute;
+      overflow: hidden;
+    .lvl1-1
+      z-index 3
+    .lvl2
+      z-index 5
+      background-image: url('../images/lvl2.png');
+      background-position: center top;
+    .lvl3
+      z-index 6
+      background-image: url('../images/lvl3.png');
+    .lvl4
+      z-index 7
+      background-image: url('../images/lvl4.png');
+    .lvl5
+      z-index 8
+      background-image: url('../images/lvl5.png');
+    .lvl6
+      z-index 9
+      background-image: url('../images/lvl6.png');
+    .lvl7
+      z-index 12
+      background-image: url('../images/lvl7a.png');
+      background-position: center bottom;
+      background-attachment fixed
+    img
+      vertical-align: bottom
+
+    .teamlogo
+      position: absolute
+      bottom 100px
+      left 40px
+      z-index: 101
+      width 100px
+      opacity .4
+        img
+          width 100%
+
+    .lvlTitle
+      position: fixed;
+      z-index 11
+      width: 100%
+      height: 100%
+      text-align center
 
 
-  .hero-img
-    position fixed
-  .lvl1
-    z-index 1
-  .lvl1-falling
-    z-index: 2
-    background-color: rgba(0,0,0,0);
-    height: 1280px;
-    width: 100%;
-    margin: auto;
-    position: absolute;
-    overflow: hidden;
-  .lvl1-1
-    z-index 3
-  .lvl2
-    z-index 5
-  .lvl3
-    z-index 6
-  .lvl4
-    z-index 7
-  .lvl5
-    z-index 8
-  .lvl6
-    z-index 9
-  .lvl7
-    z-index 10
-  img
-    vertical-align: bottom
 
-  .teamlogo
-    position: absolute
-    bottom 100px
-    left 40px
-    z-index: 101
-    width 100px
-    opacity .4
-      img
-        width 100%
-
-  .lvlTitle
-    position: relative;
-    z-index 4
-    width: 100%
-    height: 100%
-    text-align center
+      .lvlTitle-inner
+        img
+          max-width: 300px
+        h1
+          text-transform: uppercase
+          font-size: 4em
+          margin 0
+          font-family: 'Raleway'
+          font-weight: 100
+          opacity: .8
+          span
+            font-weight: 500
 
 
-
-    .lvlTitle-inner
-      img
-        width 45px
-      h1
-        text-transform: uppercase
-        font-size: 4em
-        margin 0
-        font-family: 'Raleway'
-        font-weight: 100
-        opacity: .8
-        span
-          font-weight: 500
-
-
+  .js-hero-nonparallax
+    width 100%
+    height 100%
+    .nonparallax-inner
+      height 100%
+      background-image: url('../images/mobile_hero.jpg');
+      background-position: center left;
+      background-size: cover;
 
 #hero .lvlTitle > *
     position: absolute;
@@ -139,58 +178,57 @@ body
     transform: translate(-50%, -50%);
 
 
-.background-hero-filler
-  width 100%
-  height 200px
-  background-color black
-
-  position: absolute
-  z-index 11
 
 
 #intro
-  lost-center 720px
+  lost-center 740px 20px
   z-index: 12
 
   padding-top 100px
-  //background-color: black
+  background-color: #02131C
+  #lore
+    font-family: 'montserratultra_light'
   #quote
     text-align: center
     font-size: 1.5em
     //font-style: italic
     padding: 50px 0
     text-transform: uppercase;
-    font-weight: 200
+    font-family: 'montserratultra_light'
     line-height 1.55em
-    .bold
-      font-weight: 500
+
   #video
     margin: 50px 0
+    max-width: 100%
+    display none
   #social
     text-align: center;
     .social-title
       background: url('../images/link-bg.png')
-      width 283px
+      //width 283px
       height 68px
       background-repeat: no-repeat;
       background-position: center;
       margin 0 auto
       color #02131C
       text-transform: uppercase
-      font-weight: bold;
+      font-family: 'montserratregular'
       h4
-        margin: 0;
-        padding-top: 25px;
-        font-weight: 700;
+        margin 0
+        padding-top 25px
+        font-weight 700
     ul
-      list-style: none;
-      margin 0
-      padding: 0
+      list-style none
+      margin 20px 0 0 0
+      padding 0
       li
         display inline-block
         width 40px
-        &:nth-child(2)
-          padding 20px
+        margin 0 5px
+        opacity: .6
+        &:hover
+          opacity: 1
+
 
 
 
@@ -202,7 +240,7 @@ body
     //width 95%
     margin 0 auto
     padding 30px 0
-    background-color: black
+    //background-color: black
 
     #feed-list
       margin: 0
@@ -210,6 +248,7 @@ body
       .owl-nav
         position absolute
         width 100%
+        visibility hidden
         .owl-prev
           float left
           padding-left: 15px
@@ -226,22 +265,46 @@ body
 
       .feed-el
         //width 500px
-        height 600px
-        margin-right: 10px
-        background-color: red
+        height 680px
+        //margin-right: 10px
+        background-color: #02131C
         position: relative
-        border-right 3px solid black
+        border-right: 1px solid rgba(255,255,255, 0.4);
+
+        .cross
+          position absolute
+          width 40px
+          height 40px
+          right calc(50% - 20px)
+          bottom 0px
+          opacity: 0.7
+          img
+            width 100%
+
+
+
+        .filter
+          position: absolute;
+          top 0
+          left 0
+          right 0
+          bottom 0
+          /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#02131c+0,02131c+100&0+18,1+100 */
+          background: -moz-linear-gradient(top, rgba(2,19,28,0) 0%, rgba(2,19,28,0) 18%, rgba(2,19,28,1) 100%); /* FF3.6-15 */
+          background: -webkit-linear-gradient(top, rgba(2,19,28,0) 0%,rgba(2,19,28,0) 18%,rgba(2,19,28,1) 100%); /* Chrome10-25,Safari5.1-6 */
+          background: linear-gradient(to bottom, rgba(2,19,28,0) 0%,rgba(2,19,28,0) 18%,rgba(2,19,28,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
 
         #feed-img-one
-          width: 145%;
-          margin-bottom: 100px;
+          width: 135%;
+          margin-bottom: 140px;
           position: relative;
           left: -31px;
 
         .feed-el-inner
         //  width 250px
           position: absolute
-          bottom: 10%
+          bottom: 8%
           padding: 10%
           // .feed-el-img
           //   position absolute
@@ -258,17 +321,54 @@ body
             text-transform: uppercase;
             p
               margin: 0
+              font-family: 'montserratultra_light'
+
 
           .feed-el-content
             color white
+            opacity .7
+            font-family: 'montserratultra_light'
 
 
+      #feed-el-one
+        background: url(../images/slider-war-bg.png)
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        transition: all 1s ease;
+        -moz-transition: all 1s ease;
+        -ms-transition: all 1s ease;
+        -webkit-transition: all 1s ease;
+        -o-transition: all 1s ease;
 
+      // #feed-el-one:hover {
+      //   transform: scale(1.3);
+      //   -moz-transform: scale(1.3);
+      //   -webkit-transform: scale(1.3);
+      //   -o-transform: scale(1.3);
+      // }
+
++above(1600px)
+  #feed
+    #feed-inner
+      #feed-list
+        .feed-el
+          height 800px
+
+
+.parallax
+  width 100%
+  padding-bottom: 200px
+  background-image url(../images/slider-game.jpg)
+
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  background-size: cover;
 
 #newsletter
-  lost-center 580px
+  lost-center 580px 20px
   text-align: center;
-  min-height: 80vh
+
   padding-top: 100px
 
   #newsletter-inner
@@ -277,7 +377,8 @@ body
 
 
     h3
-      font-size 1.5em
+      font-size 1.2em
+      font-family: 'montserratregular'
     form
       width 100%
       padding-top 50px
@@ -286,24 +387,48 @@ body
         background: transparent
         border 0
         border-bottom: 2px solid white
-        height 40px
+        height 49px
+        font-family: 'montserratultra_light'
 
       button
         width 30%
-        height 44px
+        height 51px
         background: transparent
         border 2px solid white
+        -webkit-border-radius: 2px 2px 2px 0;
+        border-radius: 2px 2px 2px 0;
         position relative
         text-transform: uppercase;
         color white
-        font-weight: bold
+        font-size: 1.05em
+        font-family: "montserratregular"
+        box-shadow: inset 0 0 0 0 white;
+        -webkit-transition: all ease 0.6s;
+        -moz-transition: all ease 0.6s;
+        transition: all ease 0.6s;
 
         //top 2px
         &:hover
-          background-color: white
+          box-shadow: inset 200px 0 0 0 white;
+          color: #31302B;
 
-    #successo
-      display none
+  #successo, #fallimento
+    margin-top: -50px
+    span
+      font-family: 'montserratultra_light'
+
++below(480px)
+  #newsletter
+    #newsletter-inner
+      form
+        input
+          width 100%
+          margin-bottom: 40px
+        button
+          width 60%
+          margin 0 auto
+
+
 
 
 #hiring
@@ -312,7 +437,7 @@ body
   color black
   //min-height: 80vh
   padding-top: 100px
-  padding-bottom: 250px
+  padding-bottom: 50px
 
   #hiring-inner
     lost-center 980px 20px
@@ -321,50 +446,82 @@ body
     h3
       text-align: center
       margin-bottom: 80px
-      font-size: 1.5em
+      font-size: 1.2em
+      font-family: "montserratregular"
     .hiring-content-inner
       lost-column 1/2 20px
+      margin-right: 0 !important
+      margin-bottom: 60px
+    p
+      font-size: 0.95em
+      span
+        font-size 0.75em
 
-    #hiring-content-one
+    #hiring-content-one, #hiring-content-one-b
       // border-right: 1px solid white
       // padding-right: 20px
+      border 14px solid #02131C
+      padding 25px 0px
+
+      >*
+        padding 0 20px
       #hiring-image
         width 100px
         height 100px
-        background: blue
+        //background: blue
         float: left
       #hiring-open
-        margin-left 110px
+        margin-left 120px
+        padding-top: 10px
         #h1-open
           text-transform: uppercase;
           font-size: 0.5em
           margin 0
           opacity .6
-          font-weight: bold;
+          color #10ADA2
         #h1-title
           text-transform: uppercase;
           margin 4px 0 0 0
           font-size: 1.2em
 
         #h1-txt
-          font-size: 0.75em
           margin-bottom: 35px
+          font-family: 'montserratlight'
+        #hiring-button
+          position absolute
+          z-index: 100
+          background: #02131C
+          border 3px solid #02131C
+          width 152px
+          a
+            font-family: 'montserratultra_light'
+
 
 
     #hiring-content-two
-      padding-left: 40px
-      border-left: 2px solid black
+      // padding-left: 40px
+      // border-left: 2px solid black
+      // padding 20px
+      >*
+        padding 0 20px
+      #h2-open
+        text-transform: uppercase;
+        font-size: 0.5em
+        margin 0
+        opacity .6
+        color #10ADA2
       #h2-title
         text-transform: uppercase;
         font-size: 1.2em
-        margin-top 0
-        font-weight: bold;
+        margin-top 4px
       #h2-txt
-        font-size: 0.75em
+        font-family: 'montserratlight'
         a
           text-transform: lowercase
           display: block
           padding-top: 20px
+          z-index: 100
+          position: relative;
           &:hover
             opacity .7
 
@@ -372,22 +529,412 @@ body
 
 
 
+footer
+  position: relative;
 
-
-
+#footer-up
+  position absolute
+  bottom: -10px
+  z-index: 19
 #footer
-  background-color: blue
-  min-height: 500px
-  lost-align center
+  background-color: white
+  position: absolute;
+  min-height: 300px
+
+  //lost-align center
   text-align: center;
+  color #232034
+  lost-align bottom-center
+  &-inner
+  //   position: absolute;
+  //   bottom 0
+    z-index: 20
+    p
+      color white
+      font-size: 0.8em
+
++below(480px)
+  #footer
+    min-height: 200px
+    &-inner
+      top 300px
+      min-width: 280px
+    #scrollTop
+      min-height: 200px;
+
+#scrollTop
+  position: absolute;
+  z-index: 1000
+  //right 0
+  color white
+  font-size: 1em
+  //padding-top: 20px
+  cursor: pointer;
+  text-align: center;
+  width 100%
 
 
++above(1540px)
+  #hiring
+    padding-bottom: 400px
+
+
+
+
+
+/*********
+
+  simple feed
+
+*********/
+
+#feed.container
+  background-color: #02131C
+  overflow: hidden;
+  width: 100%
+  #feed-inner
+    #feed-list
+      .feed-el-simple
+        height: 620px;
+        width 100%
+        position: relative
+
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        *
+          transition: all 1s ease;
+          -moz-transition: all 1s ease;
+          -ms-transition: all 1s ease;
+          -webkit-transition: all 1s ease;
+          -o-transition: all 1s ease;
+
+        .promo
+          position absolute
+          margin: 0 auto
+          background-color: white;
+          color: black;
+          margin: 0;
+          padding: 10px 20px;
+          text-transform: uppercase;
+          left: 10%
+          z-index: 10000
+          p
+            margin: 0
+            font-family: 'montserratlight'
+
+        .cross
+          position absolute
+          width 40px
+          height 40px
+          right calc(50% - 20px)
+          bottom 20px
+          opacity: 0.7
+          z-index: 20
+
+          img
+            width 100%
+
+
+
+        .filter
+          position: absolute;
+          top 0
+          left 0
+          right 0
+          bottom 0
+          z-index: 31
+          /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#02131c+0,02131c+100&0+18,1+100 */
+          background: -moz-linear-gradient(top, rgba(2,19,28,0) 0%, rgba(2,19,28,0) 18%, rgba(2,19,28,1) 88%); /* FF3.6-15 */
+          background: -webkit-linear-gradient(top, rgba(2,19,28,0) 0%,rgba(2,19,28,0) 18%,rgba(2,19,28,1) 88%); /* Chrome10-25,Safari5.1-6 */
+          background: linear-gradient(to bottom, rgba(2,19,28,0) 0%,rgba(2,19,28,0) 18%,rgba(2,19,28,1) 88%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
+
+        .feed-el-img
+          width: 135%;
+          margin-bottom: 170px;
+          position: relative;
+          left: -31px;
+
+        .feed-el-inner
+        //  width 250px
+          position: absolute
+          bottom: 8%
+          padding: 0% 10%
+          // .feed-el-img
+          //   position absolute
+          //   width 300px
+          //   height 300px
+          //   background-color: gold
+          //   top -80px
+          //   right -20px
+
+
+          .feed-el-title
+            color white
+            font-size: 2em
+            text-transform: uppercase;
+            z-index: 32
+            position: relative;
+            p
+              margin: 0
+              font-family: 'montserratultra_light'
+
+
+
+          .feed-el-content
+            color white
+            opacity .7
+            font-family: 'montserratultra_light'
+            max-width: 540px
+            z-index: 32
+            position: relative;
+
+          .feed-el-cta
+            position: relative;
+            z-index: 100000
+
+
+      #feed-el-one
+        z-index: 30
+        background-image: url(../images/slider-war-bg.png)
+        border: 10px solid rgba(255,255,255, 1);
+
+
+      #feed-el-two
+        background-image: url(../images/parallax.jpg)
+        -webkit-filter: grayscale(1);
+        filter: grayscale(1);
+        .feed-el-title
+          span
+            color: black
+            background: white
+            font-size .3em
+            padding 5px 10px
+            font-weight: bold;
+            position: relative;
+            bottom: 7px
+        img
+          visibility: hidden;
+
+
++above(600px)
+  #feed.container
+    width: 100%
+    #feed-inner
+      #feed-list
+        .feed-el-simple
+          width 50%
+          float left
+
+
+
++above(1024px)
+  #feed.container
+    width: 100%
+    #feed-inner
+      #feed-list
+        .feed-el-simple
+          height: auto;
+          width 50%
+          float left
+          &:hover
+            .cross, .feed-el-img
+              -webkit-filter: blur(0px);
+              filter: blur(0px);
+          .cross
+            -webkit-filter: blur(5px);
+            filter: blur(5px);
+          .feed-el-img
+            -webkit-filter: blur(2px);
+            filter: blur(2px);
 //////////////// >480
 
 
++below(768px)
+
+
+  #hiring
+    #hiring-inner
+      lost-center 430px
+      .hiring-content-inner
+        lost-column 1/1
+
+      #hiring-content-one
+        // position relative
+        // left -15px
+        margin-bottom: 130px !important
+        #hiring-image
+          float: right;
+        #hiring-open
+          margin auto
+
+
++above(768px)
+  #hiring
+    #hiring-inner
+      #hiring-content-one
+        margin-right: 10px !important
+      #hiring-content-one-b
+        margin-left: 10px
 
 
 
+
+
+/* CTA */
+
+#cta
+  min-height 100vh
+  width 100vw
+  padding 0
+  position: relative;
+  .particles-js-canvas-el
+    width:100%
+    height: 100%
+    position absolute
+    top 0
+    left 0
+    bottom 0
+    right 0
+    z-index: 10
+  #newsletter
+    max-width: 100%
+    margin 0
+    padding 0
+    padding-top: 50px
+    position: relative;
+    z-index: 11
+    #successo, #fallimento
+      margin-top 0
+  .icon-divider img
+    width 80px
+  #newsletter-inner
+    padding 0
+    lost-center 980px 20px
+    position: relative;
+    z-index: 10
+
+  #form
+    position: relative;
+    z-index: 30
+    background-color: #02131C
+    width: 100%
+    padding 40px 0
+    &>p
+      font-size .8em
+      opacity .6
+    #fallimento, #successo
+      a
+        display: block;
+        padding-top: 10px
+        color white !important
+        text-decoration: underline;
+    form
+      position: relative;
+      z-index: 30
+      lost-center 980px 20px
+      padding-bottom 50px
+      lost-center 640px
+      width 100%
+      padding-top 50px
+      input
+        width 65%
+        background: transparent
+        border 0
+        border-bottom: 2px solid white
+        height 49px
+        font-family: 'montserratultra_light'
+
+      button
+        width 30%
+        height 51px
+        background: transparent
+        border 2px solid white
+        -webkit-border-radius: 2px 2px 2px 0;
+        border-radius: 2px 2px 2px 0;
+        position relative
+        text-transform: uppercase;
+        color white
+        font-size: 1.05em
+        font-family: "montserratregular"
+        box-shadow: inset 0 0 0 0 white;
+        -webkit-transition: all ease 0.6s;
+        -moz-transition: all ease 0.6s;
+        transition: all ease 0.6s;
+
+        //top 2px
+        &:hover
+          box-shadow: inset 200px 0 0 0 white;
+          color: #31302B;
+  #quote
+    text-align: center
+    font-size: 1.5em
+    //font-style: italic
+    padding: 50px 0
+    text-transform: uppercase;
+    font-family: 'montserratultra_light'
+    line-height 1.55em
+
+
+  #social
+    //padding 100px 0
+    text-align: center;
+    position: relative;
+    z-index: 3
+    .social-title
+      background: url('../images/link-bg.png')
+      //width 283px
+      height 68px
+      background-repeat: no-repeat;
+      background-position: center;
+      margin 0 auto
+      color #02131C
+      text-transform: uppercase
+      font-family: 'montserratregular'
+      h4
+        margin 0
+        padding-top 25px
+        font-weight 700
+    ul
+      list-style none
+      margin 20px 0 0 0
+      padding 0
+      li
+        display inline-block
+        width 40px
+        margin 0 5px
+        opacity: .6
+        &:hover
+          opacity: 1
+
+
+
++below(600px)
+  #cta
+    #form
+      form
+        margin 0
+        padding 20px
+        width: auto;
+        input
+          width 100%
+          margin-bottom: 40px
+        button
+          width 60%
+          margin 0 auto
+
+
+
+
+
+#fallimento, #successo
+  a
+    display: block;
+    padding-top: 10px
+    color white !important
+    text-decoration: underline;
+    font-weight: bold;
 
 
 

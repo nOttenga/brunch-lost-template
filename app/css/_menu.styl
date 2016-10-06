@@ -1,3 +1,33 @@
+#style-rect
+	position: fixed;
+	display: block;
+	height 40px
+	width 40px
+	z-index 1000
+	top -19px
+	left calc(50% - 20px)
+	cursor: pointer;
+	transition all .5s ease-in
+	&:hover
+		top 0px
+	.icon-plus-min
+		position absolute
+		width 16px
+		height 16px
+		left 12px
+		top 8px
+		background-size: contain
+	.icon-plus
+		background-image: url(../images/plus.svg)
+	.icon-min
+		background-image: url(../images/min.svg)
+
+	img
+		width 100%
+
+
+
+
 /* Overlay style */
 .overlay {
 	position: fixed;
@@ -5,8 +35,16 @@
 	height: 100%;
 	top: 0;
 	left: 0;
-	background: rgba(153,204,51,0.9);
+	z-index 200
+	background: rgba(0,7,10,0.9);
 }
+
+.overlay-footer
+	lost-center 720px 20px
+	p
+		font-size: 12px
+
+		letter-spacing: 1.2
 
 /* Overlay closing cross */
 .overlay .overlay-close {
@@ -40,15 +78,16 @@
 	padding: 0;
 	margin: 0 auto;
 	display: inline-block;
-	height: 100%;
+	//height: 100%;
 	position: relative;
+	margin-bottom: 50px
 }
 
 .overlay ul li {
 	display: block;
 	height: 20%;
 	height: calc(100% / 5);
-	min-height: 54px;
+	min-height: 100px;
 }
 
 .overlay ul li a {

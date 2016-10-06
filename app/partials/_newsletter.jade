@@ -1,19 +1,33 @@
-.parallax(data-stellar-background-ratio="0.65")
+.parallax
   #newsletter.container
     .icon-divider
       img(src="images/icon-mail.svg", alt="")
     #newsletter-inner
       h3 Subscribe the newsletter, enroll for closed beta, and get exclusive content when the game’s out!
-      form(action="//nottenga.us12.list-manage.com/subscribe/post?u=90d7ecc6fadf95bf8c79a8070&amp;id=e2c1f57021", method="post", id="mc-embedded-subscribe-form", name="mc-embedded-subscribe-form", class="validate", target="_blank", novalidate)
+      form(action="//losthumanitygame.us14.list-manage.com/subscribe/post?u=aacbbf04b29249a1c707a5cfe&amp;id=38790a2d10", method="post", id="mc-embedded-subscribe-form", name="mc-embedded-subscribe-form", class="validate", target="_blank", novalidate)
         input(type="email", placeholder="example@mail.com")
         div(style='position: absolute; left: -5000px;')
-          input(type='text', name='b_90d7ecc6fadf95bf8c79a8070_e2c1f57021', tabindex='-1', value='')
+          input(type='text', name='b_aacbbf04b29249a1c707a5cfe_38790a2d10', tabindex='-1', value='')
         button.submit(value="Iscriviti", name="subscribe", id="mc-embedded-subscribe")
           | Subscribe
       
-      #successo 
-        img(src="#", alt="")
-        p#successo Controlla la tua mail
+    #successo.hide
+      img(src="images/success.svg", alt="")
+      p 
+        br
+        span Yeah! Just one more step to be the human we're looking for.
+        br
+        br
+        | Check your mail!
+    
+    #fallimento.hide
+      img(src="images/fail.svg", alt="")
+      p 
+        br
+        span Something get lost.
+        br
+        br
+        | Reload the page and try again! 
 
 
 // #parallax(data-stellar-background-ratio="0.25")

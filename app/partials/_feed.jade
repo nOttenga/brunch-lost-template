@@ -1,9 +1,12 @@
 #feed.container
   #feed-inner
     #feed-list.owl-carousel
-      .feed-el(style="z-index:30")
+      .feed-el#feed-el-one(style="z-index:30")
+        .filter
         .feed-el-img#feed-img-one
           img(src="images/slider-war.png", alt="")
+        .cross
+          img(src="images/cross.svg", alt="")
         .feed-el-inner
           .feed-el-title
             p The Game
@@ -25,7 +28,7 @@
             .feed-el-cta
               .menu__list
                 .menu__item
-                  a.menu__link(href='#') Discover
+                  a.menu__link.animsition-link(href='http://google.it') Discover
       .feed-el(style="z-index:28")
         .feed-el-inner
           .feed-el-img

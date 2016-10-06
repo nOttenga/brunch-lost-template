@@ -16,17 +16,41 @@ html.no-js(lang="en")
       meta(name="apple-mobile-web-app-capable", content = "yes")
       meta(name="apple-mobile-web-app-status-bar-style", content ="black")
       
+      link(rel='apple-touch-icon', sizes='180x180', href='images/favicon/apple-touch-icon.png')
+      link(rel='icon', type='image/png', href='images/favicon/favicon-32x32.png', sizes='32x32')
+      link(rel='icon', type='image/png', href='images/favicon/favicon-16x16.png', sizes='16x16')
+      link(rel='manifest', href='images/favicon/manifest.json')
+      link(rel='mask-icon', href='images/favicon/safari-pinned-tab.svg', color='#5bbad5')
+      link(rel='shortcut icon', href='images/favicon/favicon.ico')
+      meta(name='msapplication-config', content='images/favicon/browserconfig.xml')
+      meta(name='theme-color', content='#ffffff')
+
+      
       link(href='https://fonts.googleapis.com/css?family=Raleway', rel='stylesheet')
       link(href="css/vendor.css", rel="stylesheet")
       link(href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.6/assets/owl.carousel.min.css", rel="stylesheet")
       link(href="css/app.css", rel="stylesheet")
       
-      
+      // Google Tag Manager
+      script.
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-KC8V6T');
+      // End Google Tag Manager
+
+            
   
-  body
+  body#body
+    // Google Tag Manager (noscript)
+    noscript
+      iframe(src='https://www.googletagmanager.com/ns.html?id=GTM-KC8V6T', height='0', width='0', style='display:none;visibility:hidden')
+    // End Google Tag Manager (noscript)
+
     
     
-    
+    #loader
   
   
     block hero
@@ -38,7 +62,8 @@ html.no-js(lang="en")
         include partials/_intro.jade
         
       block feed
-        include partials/_feed.jade
+        //include partials/_feed.jade
+        include partials/_feed-simple.jade
       
       block newsletter
         include partials/_newsletter.jade
@@ -54,14 +79,21 @@ html.no-js(lang="en")
           include partials/_footer.jade
     
     
-    block menu
-      include partials/_menu.jade
+    
       
       
       
       
     block scripts
+      //script(src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js")
       script(src="js/vendor.js") 
       script(src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js")
       script(src="js/app.js") 
+      script.
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-83392720-1', 'auto');
+        ga('send', 'pageview');
+
       

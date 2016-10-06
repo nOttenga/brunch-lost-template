@@ -1,24 +1,121 @@
+// FONTS
+
+
+@font-face {
+    font-family: 'montserratbold';
+    src: url('../font/montserrat-bold-webfont.woff2') format('woff2'),
+         url('../font/montserrat-bold-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'montserrathairline';
+    src: url('../font/montserrat-hairline-webfont.woff2') format('woff2'),
+         url('../font/montserrat-hairline-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'montserratlight';
+    src: url('../font/montserrat-light-webfont.woff2') format('woff2'),
+         url('../font/montserrat-light-webfont.woff') format('woff');
+    font-weight: light;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'montserratregular';
+    src: url('../font/montserrat-regular-webfont.woff2') format('woff2'),
+         url('../font/montserrat-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'montserratsemi_bold';
+    src: url('../font/montserrat-semibold-webfont.woff2') format('woff2'),
+         url('../font/montserrat-semibold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'montserratultra_light';
+    src: url('../font/montserrat-ultralight-webfont.woff2') format('woff2'),
+         url('../font/montserrat-ultralight-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
 
 // COLORS
 
+a, li
+  transition .4s ease all
+
+a
+  cursor pointer
 
 
+*:focus {
+    outline: none;
+}
+
+*
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
 
 html, body
   //lost-utility edit
   border 0
   margin 0
   width 100%
-  height 100%
+  max-width: 100%
   font-size 16px
   font-weight normal
   color white
   box-sizing: border-box;
-  font-family: 'Raleway', Arial
+  background-color: #02131C
+  font-family: 'montserratregular', Arial
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 
-*
-  //outline: 1px solid black
-  box-sizing: border-box;
+
+// *
+//   //outline: 1px solid black
+//   box-sizing: border-box;
+//   text-shadow:1px 1px 1px 1px rgba(0,0,0,0.005);
+
+
 
 img
   max-width 100%
+
+.hide
+  display none !important
